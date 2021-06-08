@@ -1,0 +1,26 @@
+[
+    {
+        "image": "../assets/images/web-design.jpg",
+        "alt": "Website Design",
+        "name": "Website Design",
+        "button": "Learn More"
+    },
+    {
+        "image": "../assets/images/web-dev.jpg",
+        "alt": "Website Development",
+        "name": "Website Development",
+        "button": "Learn More"
+    },
+    {
+        "image": "../assets/images/seo.jpg",
+        "alt": "Search Engine Optimiziation",
+        "name": "Search Engine Optimiziation (SEO)",
+        "button": "Learn More"
+    },
+    {
+        "image": "../assets/images/crm.jpg",
+        "alt": "Customer Relationship Management",
+        "name": "Customer Relationship Management (CRM)",
+        "button": "Learn More"
+    }
+]
