@@ -14,7 +14,7 @@ const Hero = () => {
                 <HeroItems>
                     <HeroH1>Alacrán Digital Services</HeroH1>
                     <HeroP>Poised for growth</HeroP>
-                    <Button primary="true" round="true" big="true">Let's Connect</Button>
+                    <Button primary="true" round="true" big="true">Schedule Consultation</Button>
                 </HeroItems>
             </HeroContent>
         </HeroContainer>

@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <Nav>
       <NavLink to="/">ALÁCRAN DIGITAL SERVICES</NavLink>
-      <Bars />
+      <Bars/>
       <NavMenu>
         {menuData.map((item, index) => (
           <NavLink to={item.link} key={index}>
@@ -18,7 +18,7 @@ const Header = () => {
         ))}
       </NavMenu>
           <NavBtn>
-            <Button primary="true" round="true" to="/connect">Let's Connect</Button>
+            <Button primary="true" round="true" to="/connect">Schedule Consultation</Button>
           </NavBtn>
     </Nav>
     )
