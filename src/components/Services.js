@@ -1,9 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const Services = () => {
+import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { Button } from './Button'
+
+import { ServiceCard, ServiceImage, ServiceInfo, TextWrap, ServiceTitle, ServicesContainer, ServicesHeading, ServiceWrapper } from "./styles/ServicesStyles"
+
+const Services = ({heading}) => {
 
     const data = useStaticQuery(graphql`
         query ServicesQuery {
@@ -30,13 +33,20 @@ const Services = () => {
         data.allServicesJson.edges.forEach((item, index) => {
             const image = getImage(item.node.image)
             servicesArray.push(
-                <div key={index}>
-                    <GatsbyImage
+                <ServiceCard key={index}>
+                    <ServiceImage
                         image={image}
                         alt={item.node.alt}
                         placeholder="blurred">
-                    </GatsbyImage>
-                </div>
+                    </ServiceImage>
+                    <ServiceInfo>
+                        <TextWrap>
+                            <ServiceTitle>{item.node.name}</ServiceTitle>
+                        </TextWrap>
+                        <Button primary="true"
+                            round="true" css={`position: absolute; top: 420px; font-size: 14px`}>{item.node.button}</Button>
+                    </ServiceInfo>
+                </ServiceCard>
             )
         })
         return servicesArray;
@@ -44,7 +54,7 @@ const Services = () => {
 
     return (
         <ServicesContainer>
-            <ServicesHeading>Heading</ServicesHeading>
+            <ServicesHeading>{heading}</ServicesHeading>
             <ServiceWrapper>{getServices(data)}</ServiceWrapper>
         </ServicesContainer>
     )
@@ -52,17 +62,3 @@ const Services = () => {
 
 export default Services
 
-const ServicesContainer = styled.div`
-    min-height: 100vh;
-    padding: 5rem calc((100vw - 1300px) / 2);
-    background: blue;
-    color: #fff;
-`
-const ServicesHeading = styled.div`
-    font-size: clamp(1.2rem, 5vw, 3rem);
-    text-align: center;
-    margin-bottom: 5rem;
-    color: #000;
-`
-
-const ServiceWrapper = styled.div``
