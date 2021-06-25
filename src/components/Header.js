@@ -50,6 +50,8 @@ const NavLink = styled(Link)`
 
 
 //Bars is the literal 'hamburger' button,
+// when i added in the NavLink { it got rid of the hamburger button visually and replaced it with the schedule consulation button lol
+
 const Bars = styled(FaBars)`
   display: none;
   color: #fff;
@@ -63,6 +65,12 @@ const Bars = styled(FaBars)`
     font-size: 1.8rem;
     cursor: pointer;
   }
+
+  NavLink {
+    width: 1.5rem;
+    height: 0.2rem;
+  }
+
 `
 
 //As of now, this causes nothing visually on the site, even when the hambuger button is clicked.
