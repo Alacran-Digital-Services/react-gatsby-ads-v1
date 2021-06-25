@@ -24,11 +24,12 @@ const Header = () => {
     </Nav>
     )
 }
+// is the navBtn necesary when it is included on the home page
 
 export default Header
 
 const Nav = styled.nav`
-  background: transparent;
+  background: transparent;\
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -36,7 +37,7 @@ const Nav = styled.nav`
   z-index: 100;
   position: relative;
 `
-
+// This is the the text "ALÁCRAN DIGITAL SERVICES" on the upper left hand side
 const NavLink = styled(Link)`
   color: #fff;
   display: flex;
@@ -47,7 +48,9 @@ const NavLink = styled(Link)`
   cursor: pointer;
 `
 
-const Bars = styled(FaBars)`
+
+//Bars is the literal 'hamburger' button,
+const Bars = styled.button`
   display: none;
   color: #fff;
 
@@ -62,6 +65,7 @@ const Bars = styled(FaBars)`
   }
 `
 
+//As of now, this causes nothing visually on the site, even when the hambuger button is clicked.
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
@@ -71,7 +75,7 @@ const NavMenu = styled.div`
     display: none;
   }
 `
-
+//As of now, this causes nothing visually on the site, even when the hambuger button is clicked.
 const NavBtn = styled.div`
   display: flex;
   align-items: center;
