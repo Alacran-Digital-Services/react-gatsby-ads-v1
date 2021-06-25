@@ -29,7 +29,7 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav`
-  background: transparent;\
+  background: transparent;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -50,7 +50,7 @@ const NavLink = styled(Link)`
 
 
 //Bars is the literal 'hamburger' button,
-const Bars = styled.button`
+const Bars = styled(FaBars)`
   display: none;
   color: #fff;
 
